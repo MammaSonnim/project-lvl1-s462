@@ -1,0 +1,9 @@
+node_modules
+vendor
+dist
+build
+temp
+tmp
+.idea
+.DS_Store
+*.log

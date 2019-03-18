@@ -1,0 +1,35 @@
+{
+  "name": "msonnim-brain-games",
+  "version": "1.0.0",
+  "description": "Games to run in terminal",
+  "main": "index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "hexlet"
+  ],
+  "scripts": {
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MammaSonnim/project-lvl1-s462.git"
+  },
+  "author": "msonnim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MammaSonnim/project-lvl1-s462/issues"
+  },
+  "homepage": "https://github.com/MammaSonnim/project-lvl1-s462#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4"
+  }
+}
