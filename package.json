@@ -2,7 +2,6 @@
   "name": "msonnim-brain-games",
   "version": "1.0.0",
   "description": "Games to run in terminal",
-  "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
