@@ -26,4 +26,4 @@ export default ({ name, generateData }) => {
   }
 
   console.log(`Congratulations, ${userName}!`);
-}
+};

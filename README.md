@@ -6,19 +6,25 @@
 ```
 $ npm install -g msonnim-brain-games
 ```
+[![asciicast](https://asciinema.org/a/t266W6Bd5Kjd31Qf3JtRm5GXc.svg)](https://asciinema.org/a/t266W6Bd5Kjd31Qf3JtRm5GXc)
 
-#### Choose one of game, for example:
+#### List of games:
 ```
 $ brain-even
+$ brain-calc
 ```
 
-Enjoy!
+#### Gameplay:
 
-The same in asciinema:
-[![asciicast](https://asciinema.org/a/bFtKp7CnTf9CMhvL4ZAtFGCm8.svg)](https://asciinema.org/a/bFtKp7CnTf9CMhvL4ZAtFGCm8)
+##### brain-even
+[![asciicast](https://asciinema.org/a/oJO4AL7fzYTShldWnrvLTmDuD.svg)](https://asciinema.org/a/oJO4AL7fzYTShldWnrvLTmDuD)
+
+#### brain-calc
+[![asciicast](https://asciinema.org/a/4lDbxi1tRw7zSTZd2aqTq31qj.svg)](https://asciinema.org/a/4lDbxi1tRw7zSTZd2aqTq31qj)
 
 
 #### Uninstall
 ```
 $ npm uninstall -g msonnim-brain-games
 ```
+[![asciicast](https://asciinema.org/a/e5Uc8iZ7P9GdAQW7Tc31NGyEL.svg)](https://asciinema.org/a/e5Uc8iZ7P9GdAQW7Tc31NGyEL)
