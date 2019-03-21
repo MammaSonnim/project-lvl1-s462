@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 import greetUser from '..';
+import getRandomNumber from '../utils';
 
 const minNumber = 1;
 const maxNumber = 100;
@@ -7,7 +8,6 @@ const correctAnswersToWin = 3;
 const yes = 'yes';
 const no = 'no';
 
-const getRandomNumber = () => Math.floor(Math.random() * maxNumber) + minNumber;
 const isEven = number => number % 2 === 0;
 
 export default () => {
@@ -17,7 +17,7 @@ export default () => {
   const userName = greetUser();
 
   for (let i = 0; i < correctAnswersToWin; i += 1) {
-    const number = getRandomNumber();
+    const number = getRandomNumber(minNumber, maxNumber);
 
     console.log(`Question: ${number}`);
 
