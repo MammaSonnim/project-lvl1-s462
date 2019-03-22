@@ -1,39 +1,32 @@
 import createGame from '../createGame';
-import getRandomNumber from '../utils';
+import utils from '../utils';
 
-const minNumber = 1;
-const maxNumber = 10;
+const { getRandomNumber, getRandomItem } = utils;
 
-const operators = [{
-  sign: '+',
-  calculation: (a, b) => a + b,
-}, {
-  sign: '-',
-  calculation: (a, b) => a - b,
-}, {
-  sign: '*',
-  calculation: (a, b) => a * b,
-}];
-
-const getRandomItem = array => Math.floor(Math.random() * array.length);
-const getSign = selected => operators[selected].sign;
+const description = 'What is the result of the expression?';
+const minNumber = 2;
+const maxNumber = 20;
+const operators = ['+', '-', '*'];
+const calculations = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+};
 
 export default () => {
   const generateData = () => {
     const firstArg = getRandomNumber(minNumber, maxNumber);
     const secondArg = getRandomNumber(minNumber, maxNumber);
-    const selected = getRandomItem(operators);
-    const sign = getSign(selected);
-    const resultOfCalc = operators[selected].calculation(firstArg, secondArg);
+    const sign = getRandomItem(operators);
+
+    const question = `${firstArg} ${sign} ${secondArg}`;
+    const correctAnswer = String(calculations[sign](firstArg, secondArg));
 
     return {
-      question: `${firstArg} ${sign} ${secondArg}`,
-      correctAnswer: String(resultOfCalc),
+      question,
+      correctAnswer,
     };
   };
 
-  return createGame({
-    name: 'What is the result of the expression?',
-    generateData,
-  });
+  createGame(description, generateData);
 };

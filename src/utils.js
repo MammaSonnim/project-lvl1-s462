@@ -1,3 +1,10 @@
 const getRandomNumber = (min, max) => Math.floor(Math.random() * max) + min;
 
-export default getRandomNumber;
+const getRandomItem = array => array[Math.floor(Math.random() * array.length)];
+
+const utils = {
+  getRandomNumber,
+  getRandomItem,
+};
+
+export default utils;
