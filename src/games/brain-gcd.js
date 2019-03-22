@@ -7,12 +7,12 @@ const description = 'Find the greatest common divisor of given numbers.';
 const minNumber = 5;
 const maxNumber = 48;
 
-const gcb = (x, y) => {
+const gcd = (x, y) => {
   if (y === 0) {
     return x;
   }
 
-  return gcb(y, x % y);
+  return gcd(y, x % y);
 };
 
 export default () => {
@@ -21,7 +21,7 @@ export default () => {
     const secondArg = getRandomNumber(minNumber, maxNumber);
 
     const question = `${firstArg} ${secondArg}`;
-    const correctAnswer = String(gcb(firstArg, secondArg));
+    const correctAnswer = String(gcd(firstArg, secondArg));
 
     return {
       question,
