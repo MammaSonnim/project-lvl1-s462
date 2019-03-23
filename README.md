@@ -13,6 +13,7 @@ $ npm install -g msonnim-brain-games
 $ brain-even
 $ brain-calc
 $ brain-gcd
+$ brain-progression
 ```
 
 ### Gameplay:
@@ -25,6 +26,9 @@ $ brain-gcd
 
 #### brain-gcd
 [![asciicast](https://asciinema.org/a/hgcVBPm4hNjOILIAu8zJjRRQ8.svg)](https://asciinema.org/a/hgcVBPm4hNjOILIAu8zJjRRQ8)
+
+#### brain-progression
+[![asciicast](https://asciinema.org/a/FdhRbDELGTYnC4FUCJvdf5itP.svg)](https://asciinema.org/a/FdhRbDELGTYnC4FUCJvdf5itP)
 
 ### Uninstall
 ```

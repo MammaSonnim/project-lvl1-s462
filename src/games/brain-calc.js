@@ -1,7 +1,7 @@
 import createGame from '../createGame';
 import utils from '../utils';
 
-const { getRandomNumber, getRandomItem } = utils;
+const { getRandomNumber } = utils;
 
 const description = 'What is the result of the expression?';
 const minNumber = 2;
@@ -12,6 +12,8 @@ const calculations = {
   '-': (a, b) => a - b,
   '*': (a, b) => a * b,
 };
+
+const getRandomItem = array => array[Math.floor(Math.random() * array.length)];
 
 export default () => {
   const generateData = () => {
