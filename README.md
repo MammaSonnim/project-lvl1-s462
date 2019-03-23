@@ -14,6 +14,7 @@ $ brain-even
 $ brain-calc
 $ brain-gcd
 $ brain-progression
+$ brain-prime
 ```
 
 ### Gameplay:
@@ -29,6 +30,9 @@ $ brain-progression
 
 #### brain-progression
 [![asciicast](https://asciinema.org/a/FdhRbDELGTYnC4FUCJvdf5itP.svg)](https://asciinema.org/a/FdhRbDELGTYnC4FUCJvdf5itP)
+
+#### brain-prime
+[![asciicast](https://asciinema.org/a/xQaJISk0UtfvqVeJTH9DTOSfA.svg)](https://asciinema.org/a/xQaJISk0UtfvqVeJTH9DTOSfA)
 
 ### Uninstall
 ```
