@@ -1,4 +1,4 @@
-import createGame from '../createGame';
+import launchGame from '../game-launcher';
 import utils from '../utils';
 
 const { getRandomNumber } = utils;
@@ -6,17 +6,13 @@ const { getRandomNumber } = utils;
 const description = 'What number is missing in the progression?';
 const minNumber = 1;
 const maxNumber = 5;
-const countOfNumbers = 10;
+const ApLength = 10;
 
-const getArithmeticProgression = (start, step, count) => {
+const getArithmeticProgression = (start, step, length) => {
   const arr = [];
-  let init = start;
 
-  for (let i = 0; i < count; i += 1) {
-    const next = init + step;
-
-    arr.push(init);
-    init = next;
+  for (let i = 1; i <= length; i += 1) {
+    arr.push(start + step * i);
   }
 
   return arr;
@@ -34,11 +30,11 @@ export default () => {
   const generateData = () => {
     const start = getRandomNumber(minNumber, maxNumber);
     const step = getRandomNumber(minNumber, maxNumber);
-    const arithmeticProgression = getArithmeticProgression(start, step, countOfNumbers);
-    const missedIndex = getRandomNumber(0, countOfNumbers);
+    const numbers = getArithmeticProgression(start, step, ApLength);
+    const missedIndex = getRandomNumber(0, ApLength - 1);
 
-    const question = getCensoredSequence(arithmeticProgression, missedIndex);
-    const correctAnswer = String(arithmeticProgression[missedIndex]);
+    const question = getCensoredSequence(numbers, missedIndex);
+    const correctAnswer = String(numbers[missedIndex]);
 
     return {
       question,
@@ -46,5 +42,5 @@ export default () => {
     };
   };
 
-  createGame(description, generateData);
+  launchGame(description, generateData);
 };

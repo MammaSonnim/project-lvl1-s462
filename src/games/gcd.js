@@ -1,4 +1,4 @@
-import createGame from '../createGame';
+import launchGame from '../game-launcher';
 import utils from '../utils';
 
 const { getRandomNumber } = utils;
@@ -29,5 +29,5 @@ export default () => {
     };
   };
 
-  createGame(description, generateData);
+  launchGame(description, generateData);
 };

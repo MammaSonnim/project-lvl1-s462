@@ -1,4 +1,4 @@
-import createGame from '../createGame';
+import launchGame from '../game-launcher';
 import utils from '../utils';
 
 const { getRandomNumber } = utils;
@@ -8,6 +8,10 @@ const minNumber = 5;
 const maxNumber = 48;
 
 const isPrime = (num) => {
+  if (num <= 1) {
+    return false;
+  }
+
   for (let i = 2; i < num; i += 1) {
     if (!(num % i)) {
       return false;
@@ -28,5 +32,5 @@ export default () => {
     };
   };
 
-  createGame(description, generateData);
+  launchGame(description, generateData);
 };
