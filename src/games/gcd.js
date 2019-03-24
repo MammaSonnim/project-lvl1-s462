@@ -1,7 +1,5 @@
 import launchGame from '../game-launcher';
-import utils from '../utils';
-
-const { getRandomNumber } = utils;
+import getRandomNumber from '../utils';
 
 const description = 'Find the greatest common divisor of given numbers.';
 const minNumber = 5;
@@ -15,19 +13,19 @@ const getGreatestCommonDivisor = (x, y) => {
   return getGreatestCommonDivisor(y, x % y);
 };
 
-export default () => {
-  const generateData = () => {
-    const firstArg = getRandomNumber(minNumber, maxNumber);
-    const secondArg = getRandomNumber(minNumber, maxNumber);
+const generateData = () => {
+  const firstArg = getRandomNumber(minNumber, maxNumber);
+  const secondArg = getRandomNumber(minNumber, maxNumber);
 
-    const question = `${firstArg} ${secondArg}`;
-    const correctAnswer = String(getGreatestCommonDivisor(firstArg, secondArg));
+  const question = `${firstArg} ${secondArg}`;
+  const correctAnswer = String(getGreatestCommonDivisor(firstArg, secondArg));
 
-    return {
-      question,
-      correctAnswer,
-    };
+  return {
+    question,
+    correctAnswer,
   };
+};
 
+export default () => {
   launchGame(description, generateData);
 };

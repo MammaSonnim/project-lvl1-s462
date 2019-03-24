@@ -1,7 +1,5 @@
 import launchGame from '../game-launcher';
-import utils from '../utils';
-
-const { getRandomNumber } = utils;
+import getRandomNumber from '../utils';
 
 const description = 'What is the result of the expression?';
 const minNumber = 2;
@@ -15,20 +13,20 @@ const oerations = {
 
 const getRandomItem = array => array[getRandomNumber(0, array.length - 1)];
 
-export default () => {
-  const generateData = () => {
-    const firstArg = getRandomNumber(minNumber, maxNumber);
-    const secondArg = getRandomNumber(minNumber, maxNumber);
-    const operator = getRandomItem(operators);
+const generateData = () => {
+  const firstArg = getRandomNumber(minNumber, maxNumber);
+  const secondArg = getRandomNumber(minNumber, maxNumber);
+  const operator = getRandomItem(operators);
 
-    const question = `${firstArg} ${operator} ${secondArg}`;
-    const correctAnswer = String(oerations[operator](firstArg, secondArg));
+  const question = `${firstArg} ${operator} ${secondArg}`;
+  const correctAnswer = String(oerations[operator](firstArg, secondArg));
 
-    return {
-      question,
-      correctAnswer,
-    };
+  return {
+    question,
+    correctAnswer,
   };
+};
 
+export default () => {
   launchGame(description, generateData);
 };

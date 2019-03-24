@@ -1,7 +1,5 @@
 import launchGame from '../game-launcher';
-import utils from '../utils';
-
-const { getRandomNumber } = utils;
+import getRandomNumber from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const minNumber = 5;
@@ -21,16 +19,16 @@ const isPrime = (num) => {
   return true;
 };
 
-export default () => {
-  const generateData = () => {
-    const question = getRandomNumber(minNumber, maxNumber);
-    const correctAnswer = isPrime(question) ? 'yes' : 'no';
+const generateData = () => {
+  const question = getRandomNumber(minNumber, maxNumber);
+  const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
-    return {
-      question,
-      correctAnswer,
-    };
+  return {
+    question,
+    correctAnswer,
   };
+};
 
+export default () => {
   launchGame(description, generateData);
 };
